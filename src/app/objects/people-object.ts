@@ -8,7 +8,7 @@ export class PeopleObject {
   mass: string
   skin_color: string
   homeworld: string
-  films: Film[];
+//  films: Film[];
   url: string;
   created: string;
   edited: string;

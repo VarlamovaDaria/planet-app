@@ -8,8 +8,8 @@ export class PlanetObject {
   climate: string;
   terrain: string;
   surface_water: string;
-  residents: People[];
-  films: Film[];
+ // residents: People[];
+//  films: Film[];
   url: string;
   created: string;
   edited: string;

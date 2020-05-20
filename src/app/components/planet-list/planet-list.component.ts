@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {PageEvent} from "@angular/material/paginator";
-import {PlanetObject} from "../../objects/planet-object";
-import {PlanetService} from "../../services/planet.service";
+import { PageEvent } from "@angular/material/paginator";
+import { PlanetObject } from "../../objects/planet-object";
+import { PlanetService } from "../../services/planet.service";
 
 @Component({
   selector: 'app-planet-list',
@@ -14,6 +14,7 @@ export class PlanetListComponent implements OnInit {
   pageSizeOptions: number[] = [10, 25, 100];
   pageEvent: PageEvent;
   planets: PlanetObject[];
+  planet: PlanetObject;
 
   constructor(
     private planetService: PlanetService) {

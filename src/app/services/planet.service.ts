@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {GlobalConfig} from "../configuration/global-config";
+import { HttpClient } from "@angular/common/http";
+import { GlobalConfig } from "../configuration/global-config";
 import { PlanetObject } from "../objects/planet-object";
 
 @Injectable({

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { PlanetListComponent } from "../planet-list/planet-list.component";
 
 @Component({
@@ -7,10 +7,9 @@ import { PlanetListComponent } from "../planet-list/planet-list.component";
   styleUrls: ['./planets.component.css']
 })
 export class PlanetsComponent implements OnInit {
+  @Input('parent') planetList: PlanetListComponent
 
-  constructor(
-    private planetList: PlanetListComponent
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
