@@ -3,6 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { GlobalConfig } from "../configuration/global-config";
 import { PeopleObject } from "../objects/people-object";
 import {PlanetObject} from "../objects/planet-object";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'

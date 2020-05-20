@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { GlobalConfig } from "../configuration/global-config";
 import { PlanetObject } from "../objects/planet-object";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class PlanetService {
     private planet: PlanetObject) {
   }
 
-  getAllPlanets() {
+  getAllPlanets(): Observable<PlanetObject[]> {
     const url = '/planets/';
 
     return this.httpClient
