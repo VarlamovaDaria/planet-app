@@ -16,15 +16,8 @@ export class PlanetListComponent implements OnInit {
   planets: PlanetObject[];
   planet: PlanetObject;
 
-  constructor( private planetService: PlanetService ) {}
+  constructor( private planetService: PlanetService ) {  }
 
-
-  ngOnInit() {
-    this.planets = this.planetService.getAllPlanets().subscribe(planets => {
-      this.planets = planets;
-    });
-  }
-
-
+  ngOnInit() { }
 
 }

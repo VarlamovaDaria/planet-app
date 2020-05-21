@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import { GlobalConfig } from "../configuration/global-config";
 import { PlanetObject } from "../objects/planet-object";
-import {Observable} from "rxjs";
+import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class PlanetService {
   constructor(
     private httpClient: HttpClient,
     private config: GlobalConfig,
-    private planet: PlanetObject) {
+    private planet: PlanetObject ) {
   }
 
   getAllPlanets(): Observable<PlanetObject[]> {
