@@ -6,9 +6,11 @@ import { PlanetObject } from "../../objects/planet-object";
 })
 export class PlanetIdService {
 
-  constructor() { }
+  constructor() {
+
+  }
 
   getPlanetId(planet: PlanetObject) {
-    return planet.url.match(/\d+/);
+    return +planet.url.match(/\d+/);
   }
 }

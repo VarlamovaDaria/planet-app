@@ -11,8 +11,7 @@ import { PlanetIdService } from "../planet-id-service/planet-id.service";
 export class PlanetService {
   constructor(
     private httpClient: HttpClient,
-    private config: GlobalConfig,
-    private id: PlanetIdService) {
+    private config: GlobalConfig) {
   }
 
   getAllPlanets(): Observable<PlanetObject[]> {
@@ -22,9 +21,7 @@ export class PlanetService {
       .get<PlanetObject[]>(`${this.config.apiUrl}${url}`);
   }
 
-  getPlanet() {
-    const id = this.id;
-
+  getPlanet(id: Number) {
     return this.httpClient.get<PlanetObject[]>(`${this.config.apiUrl}${id}`);
   }
 }

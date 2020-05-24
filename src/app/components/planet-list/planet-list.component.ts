@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PageEvent } from "@angular/material/paginator";
 import { PlanetObject } from "../../objects/planet-object";
 import { PlanetService } from "../../services/planet-service/planet.service";
+import {PlanetIdService} from "../../services/planet-id-service/planet-id.service";
 
 @Component({
   selector: 'app-planet-list',
@@ -16,8 +17,15 @@ export class PlanetListComponent implements OnInit {
   planets: PlanetObject[];
   planet: PlanetObject;
 
-  constructor( private planetService: PlanetService ) {  }
+  constructor(
+    private planetService: PlanetService,
+    private planetIdService: PlanetIdService,
+    ) {  }
 
   ngOnInit() { }
 
+  onPlanetClick() {
+   let id = this.planetIdService.getPlanetId(this.planet);
+   this.planetService.getPlanet(id);
+  }
 }
