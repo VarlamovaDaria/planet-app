@@ -3,13 +3,12 @@
     <mat-card-title>{{planet.name}}</mat-card-title>
     <mat-card-subtitle> population: {{planet.population}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="../../../assets/planet.jpg" alt="Click to see more details. ">
+  <img onclick ="getPlanetId(this.planet)" mat-card-image src="../../../assets/planet.jpg" alt="Click to see more details. ">
   <mat-card-content>
   </mat-card-content>
 </mat-card>
 
 <mat-paginator [length]="length"
                [pageSize]="defaultPageSize"
-               [pageSizeOptions]="pageSizeOptions"
-               (page)="pageEvent = $event">
+               [pageSizeOptions]="pageSizeOptions">
 </mat-paginator>

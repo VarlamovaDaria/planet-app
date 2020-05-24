@@ -12,7 +12,7 @@ import { PlanetListComponent } from './components/planet-list/planet-list.compon
 import { SearchPlanetComponent } from './components/search-planet/search-planet.component';
 
 import { GlobalConfig } from './configuration/global-config';
-import { PlanetService } from "./services/planet.service";
+import { PlanetService } from "./services/planet-service/planet.service";
 
 
 @NgModule({

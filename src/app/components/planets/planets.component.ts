@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { PlanetListComponent } from "../planet-list/planet-list.component";
-import { PlanetService } from "../../services/planet.service";
+import { PlanetService } from "../../services/planet-service/planet.service";
 import {PlanetObject} from "../../objects/planet-object";
 
 @Component({
@@ -13,7 +13,7 @@ export class PlanetsComponent implements OnInit {
   planets: PlanetObject[];
 
   constructor( private planetService: PlanetService ) {
-    this.planetService.getAllPlanets().subscribe(planets => {
+      this.planetService.getAllPlanets().subscribe(planets => {
       this.planets = planets;
     });
   }
