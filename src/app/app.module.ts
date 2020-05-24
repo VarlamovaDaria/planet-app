@@ -13,6 +13,8 @@ import { SearchPlanetComponent } from './components/search-planet/search-planet.
 
 import { GlobalConfig } from './configuration/global-config';
 import { PlanetService } from "./services/planet-service/planet.service";
+import {MatListModule} from "@angular/material/list";
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { PlanetService } from "./services/planet-service/planet.service";
     BrowserAnimationsModule,
     MatCardModule,
     MatPaginatorModule,
-    HttpClientModule
+    HttpClientModule,
+    MatListModule,
+    MatIconModule
   ],
   providers: [GlobalConfig, PlanetService],
   bootstrap: [AppComponent]

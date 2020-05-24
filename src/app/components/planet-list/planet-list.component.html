@@ -1,12 +1,12 @@
-<mat-card class="planets">
-  <mat-card-header>
-    <mat-card-title>{{planet.name}}</mat-card-title>
-    <mat-card-subtitle> population: {{planet.population}}</mat-card-subtitle>
-  </mat-card-header>
-  <img onclick ="onPlanetClick()" mat-card-image src="../../../assets/planet.jpg" alt="Click to see more details. ">
-  <mat-card-content>
-  </mat-card-content>
-</mat-card>
+<mat-list>
+  <div mat-subheader>Planets</div>
+  <mat-list-item mat-list-icon *ngFor="let planet of planets">
+    <mat-icon onclick ="onPlanetClick()" mat-card-image
+      src="../../../assets/planet.jpg" alt="Click to see more details. "></mat-icon>
+    <div mat-line>name: {{planet.name}}</div>
+    <div mat-line>population: {{planet.population}} </div>
+  </mat-list-item>
+</mat-list>
 
 <mat-paginator [length]="length"
                [pageSize]="defaultPageSize"

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PageEvent } from "@angular/material/paginator";
 import { PlanetObject } from "../../objects/planet-object";
 import { PlanetService } from "../../services/planet-service/planet.service";
-import {PlanetIdService} from "../../services/planet-id-service/planet-id.service";
+import { PlanetIdService } from "../../services/planet-id-service/planet-id.service";
 
 @Component({
   selector: 'app-planet-list',
@@ -20,7 +20,11 @@ export class PlanetListComponent implements OnInit {
   constructor(
     private planetService: PlanetService,
     private planetIdService: PlanetIdService,
-    ) {  }
+    ) {
+      this.planetService.getAllPlanets().subscribe(planets => {
+      this.planets = planets;
+    });
+  }
 
   ngOnInit() { }
 
