@@ -12,7 +12,7 @@ import { PlanetIdService } from "../../services/planet-id-service/planet-id.serv
 export class PlanetListComponent implements OnInit {
   length = 12;
   defaultPageSize = 10;
-  pageSizeOptions: number[] = [10, 25, 100];
+  pageSizeOptions: number[] = [5, 10, 25, 100];
   pageEvent: PageEvent;
   planets: PlanetObject[];
   planet: PlanetObject;
