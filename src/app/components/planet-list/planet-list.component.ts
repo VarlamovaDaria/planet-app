@@ -24,12 +24,12 @@ export class PlanetListComponent implements OnInit {
       this.planetService.getAllPlanets().subscribe(planets => {
       this.planets = planets;
     });
-  }
+   }
 
   ngOnInit() { }
 
   onPlanetClick() {
-   let id = this.planetIdService.getPlanetId(this.planet);
-   this.planetService.getPlanet(id);
+ //  let id = this.planetIdService.getPlanetId(this.planet);
+ //  this.planetService.getPlanet(id);
   }
 }
