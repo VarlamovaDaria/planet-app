@@ -3,6 +3,7 @@ import { PageEvent } from "@angular/material/paginator";
 import { PlanetObject } from "../../objects/planet-object";
 import { PlanetService } from "../../services/planet-service/planet.service";
 import { PlanetIdService } from "../../services/planet-id-service/planet-id.service";
+import { ResultObject } from "../../objects/result-object";
 
 @Component({
   selector: 'app-planet-list',
@@ -14,22 +15,22 @@ export class PlanetListComponent implements OnInit {
   defaultPageSize = 10;
   pageSizeOptions: number[] = [5, 10, 25, 100];
   pageEvent: PageEvent;
+  result: ResultObject[];
   planets: PlanetObject[];
-  planet: PlanetObject;
 
   constructor(
     private planetService: PlanetService,
     private planetIdService: PlanetIdService,
-    ) {
-      this.planetService.getAllPlanets().subscribe(planets => {
-      this.planets = planets;
+    ) { }
+
+  ngOnInit() {
+      this.planetService.getAllPlanets().subscribe(response => {
+        this.result = response;
     });
-   }
+  }
 
-  ngOnInit() { }
-
-  onPlanetClick() {
+ // onPlanetClick() {
  //  let id = this.planetIdService.getPlanetId(this.planet);
  //  this.planetService.getPlanet(id);
-  }
+ // }
 }

@@ -10,7 +10,7 @@ export class PlanetObject {
 //  surface_water: string;
   //residents: People[];
   //films: Film[];
- // url: string;
+  url: string;
  // created: string;
  // edited: string;
 }

@@ -4,6 +4,7 @@ import { GlobalConfig } from "../../configuration/global-config";
 import { PlanetObject } from "../../objects/planet-object";
 import { Observable } from "rxjs";
 import { PlanetIdService } from "../planet-id-service/planet-id.service";
+import { ResultObject } from "../../objects/result-object";
 
 @Injectable({
   providedIn: 'root'
@@ -14,11 +15,11 @@ export class PlanetService {
     private config: GlobalConfig) {
   }
 
-  getAllPlanets(): Observable<PlanetObject[]> {
-    const url = '/planets/';
+  getAllPlanets(): Observable<ResultObject[]> {
+    const url = 'planets/';
 
     return this.httpClient
-      .get<PlanetObject[]>(`${this.config.apiUrl}${url}`);
+      .get<ResultObject[]>(`${this.config.apiUrl}${url}`);
   }
 
   getPlanet(id: Number) {
